@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoldSocial — Social Media Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">G</div>
+
+            <div>
+                <h2>GoldSocial</h2>
+                <span>Social Analytics</span>
+            </div>
+        </div>
+
+
+        <nav>
+
+            <p class="nav-title">ASOSIY</p>
+
+            <button class="nav-item active">
+                <span>⌂</span>
+                Bosh sahifa
+            </button>
+
+            <button class="nav-item">
+                <span>▣</span>
+                Analitika
+            </button>
+
+            <button class="nav-item">
+                <span>◈</span>
+                Postlar
+            </button>
+
+            <button class="nav-item">
+                <span>◉</span>
+                Auditoriya
+            </button>
+
+            <p class="nav-title">PLATFORMALAR</p>
+
+            <button class="nav-item">
+                <span class="platform instagram">◎</span>
+                Instagram
+            </button>
+
+            <button class="nav-item">
+                <span class="platform telegram">➤</span>
+                Telegram
+            </button>
+
+            <button class="nav-item">
+                <span class="platform youtube">▶</span>
+                YouTube
+            </button>
+
+            <button class="nav-item">
+                <span class="platform tiktok">♪</span>
+                TikTok
+            </button>
+
+            <p class="nav-title">BOSHQARUV</p>
+
+            <button class="nav-item">
+                <span>⚙</span>
+                Sozlamalar
+            </button>
+
+            <button class="nav-item">
+                <span>?</span>
+                Yordam
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="upgrade-card">
+
+                <div class="upgrade-icon">✦</div>
+
+                <strong>Premium</strong>
+
+                <p>
+                    Ko‘proq analitika va imkoniyatlar.
+                </p>
+
+                <button>
+                    Yangilash →
+                </button>
+
+            </div>
+
+
+            <div class="author">
+                Muallif: Akramjanova Jadra Maratovna.
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+
+                <h1>Social Dashboard</h1>
+
+                <p>
+                    Ijtimoiy tarmoqlaringiz holatini kuzating.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+                    ♢
+                    <i></i>
+                </button>
+
+                <button class="date-btn">
+                    ◷
+                    So‘nggi 30 kun
+                    ▾
+                </button>
+
+                <div class="user">
+
+                    <div class="user-avatar">
+                        AJ
+                    </div>
+
+                    <div>
+                        <strong>Jadra</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATS -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Jami obunachilar</span>
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                </div>
+
+                <h2 id="followers">
+                    128,540
+                </h2>
+
+                <div class="growth positive">
+                    ↑ 12.8%
+                    <span>o‘tgan oyga nisbatan</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Engagement</span>
+
+                    <div class="stat-icon">
+                        ♡
+                    </div>
+
+                </div>
+
+                <h2>
+                    8.74%
+                </h2>
+
+                <div class="growth positive">
+                    ↑ 4.2%
+                    <span>o‘tgan oyga nisbatan</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Ko‘rishlar</span>
+
+                    <div class="stat-icon">
+                        ◉
+                    </div>
+
+                </div>
+
+                <h2>
+                    2.48M
+                </h2>
+
+                <div class="growth positive">
+                    ↑ 18.6%
+                    <span>o‘tgan oyga nisbatan</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Postlar</span>
+
+                    <div class="stat-icon">
+                        ▣
+                    </div>
+
+                </div>
+
+                <h2>
+                    184
+                </h2>
+
+                <div class="growth negative">
+                    ↓ 2.4%
+                    <span>o‘tgan oyga nisbatan</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYTICS GRID -->
+        <section class="analytics-grid">
+
+            <!-- CHART -->
+            <div class="panel chart-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Auditoriya o‘sishi</h3>
+                        <span>Obunachilar dinamikasi</span>
+                    </div>
+
+                    <select id="chartSelect">
+
+                        <option value="followers">
+                            Obunachilar
+                        </option>
+
+                        <option value="views">
+                            Ko‘rishlar
+                        </option>
+
+                        <option value="engagement">
+                            Engagement
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+
+                        <span>150K</span>
+                        <span>120K</span>
+                        <span>90K</span>
+                        <span>60K</span>
+                        <span>30K</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+
+
+                        <svg
+                            viewBox="0 0 700 250"
+                            preserveAspectRatio="none"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="goldGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#d4af37"
+                                        stop-opacity=".35"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#d4af37"
+                                        stop-opacity="0"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <path
+                                class="area"
+                                d="
+                                M0 210
+                                L80 195
+                                L160 180
+                                L240 188
+                                L320 145
+                                L400 130
+                                L480 105
+                                L560 118
+                                L640 75
+                                L700 55
+                                L700 250
+                                L0 250
+                                Z
+                                "
+                            />
+
+
+                            <polyline
+                                class="line"
+                                points="
+                                0,210
+                                80,195
+                                160,180
+                                240,188
+                                320,145
+                                400,130
+                                480,105
+                                560,118
+                                640,75
+                                700,55
+                                "
+                            />
+
+
+                            <circle cx="700" cy="55" r="5"/>
+
+                        </svg>
+
+
+                        <div class="x-axis">
+
+                            <span>1 Mar</span>
+                            <span>5 Mar</span>
+                            <span>10 Mar</span>
+                            <span>15 Mar</span>
+                            <span>20 Mar</span>
+                            <span>25 Mar</span>
+                            <span>30 Mar</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLATFORM -->
+            <div class="panel platform-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Platformalar</h3>
+                        <span>Umumiy natijalar</span>
+                    </div>
+
+                    <button class="more-btn">
+                        •••
+                    </button>
+
+                </div>
+
+
+                <div class="platform-list">
+
+                    <div class="platform-row">
+
+                        <div class="platform-name">
+
+                            <div class="social-icon instagram">
+                                ◎
+                            </div>
+
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>56.8K obunachi</span>
+                            </div>
+
+                        </div>
+
+                        <div class="platform-value">
+
+                            <strong>44%</strong>
+
+                            <div class="progress">
+                                <i style="width:44%"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="platform-row">
+
+                        <div class="platform-name">
+
+                            <div class="social-icon telegram">
+                                ➤
+                            </div>
+
+                            <div>
+                                <strong>Telegram</strong>
+                                <span>31.2K obunachi</span>
+                            </div>
+
+                        </div>
+
+                        <div class="platform-value">
+
+                            <strong>24%</strong>
+
+                            <div class="progress">
+                                <i style="width:24%"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="platform-row">
+
+                        <div class="platform-name">
+
+                            <div class="social-icon youtube">
+                                ▶
+                            </div>
+
+                            <div>
+                                <strong>YouTube</strong>
+                                <span>24.6K obunachi</span>
+                            </div>
+
+                        </div>
+
+                        <div class="platform-value">
+
+                            <strong>19%</strong>
+
+                            <div class="progress">
+                                <i style="width:19%"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="platform-row">
+
+                        <div class="platform-name">
+
+                            <div class="social-icon tiktok">
+                                ♪
+                            </div>
+
+                            <div>
+                                <strong>TikTok</strong>
+                                <span>15.9K obunachi</span>
+                            </div>
+
+                        </div>
+
+                        <div class="platform-value">
+
+                            <strong>13%</strong>
+
+                            <div class="progress">
+                                <i style="width:13%"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM GRID -->
+        <section class="bottom-grid">
+
+            <!-- TOP POSTS -->
+            <div class="panel posts-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Eng yaxshi postlar</h3>
+                        <span>Eng ko‘p engagement olganlar</span>
+                    </div>
+
+                    <button class="view-btn">
+                        Barchasini ko‘rish →
+                    </button>
+
+                </div>
+
+
+                <div class="post-list">
+
+                    <div class="post-row">
+
+                        <div class="post-image image-one">
+                            🚀
+                        </div>
+
+                        <div class="post-info">
+
+                            <strong>
+                                Yangi loyihamiz ishga tushdi 🚀
+                            </strong>
+
+                            <span>
+                                Instagram • 2 kun oldin
+                            </span>
+
+                        </div>
+
+                        <div class="post-stats">
+
+                            <span>♡ 4.8K</span>
+                            <span>◉ 82K</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-row">
+
+                        <div class="post-image image-two">
+                            💻
+                        </div>
+
+                        <div class="post-info">
+
+                            <strong>
+                                Dasturchilar uchun 10 maslahat
+                            </strong>
+
+                            <span>
+                                Instagram • 4 kun oldin
+                            </span>
+
+                        </div>
+
+                        <div class="post-stats">
+
+                            <span>♡ 3.9K</span>
+                            <span>◉ 64K</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-row">
+
+                        <div class="post-image image-three">
+                            ✨
+                        </div>
+
+                        <div class="post-info">
+
+                            <strong>
+                                Kelajak texnologiyalari
+                            </strong>
+
+                            <span>
+                                YouTube • 6 kun oldin
+                            </span>
+
+                        </div>
+
+                        <div class="post-stats">
+
+                            <span>♡ 3.2K</span>
+                            <span>◉ 51K</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITY -->
+            <div class="panel activity-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>So‘nggi faollik</h3>
+                        <span>Real vaqt ma’lumotlari</span>
+                    </div>
+
+                    <span class="live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ↑
+                        </div>
+
+                        <div>
+                            <strong>
+                                1,240 yangi obunachi
+                            </strong>
+
+                            <span>
+                                So‘nggi 24 soat ichida
+                            </span>
+                        </div>
+
+                        <time>
+                            2m
+                        </time>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ♡
+                        </div>
+
+                        <div>
+                            <strong>
+                                8,420 ta yangi like
+                            </strong>
+
+                            <span>
+                                Barcha platformalarda
+                            </span>
+                        </div>
+
+                        <time>
+                            12m
+                        </time>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ◉
+                        </div>
+
+                        <div>
+                            <strong>
+                                32K yangi ko‘rish
+                            </strong>
+
+                            <span>
+                                So‘nggi postlarda
+                            </span>
+                        </div>
+
+                        <time>
+                            24m
+                        </time>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            💬
+                        </div>
+
+                        <div>
+                            <strong>
+                                486 yangi izoh
+                            </strong>
+
+                            <span>
+                                Auditoriya faolligi
+                            </span>
+                        </div>
+
+                        <time>
+                            31m
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="quick-actions">
+
+            <button id="createPost">
+                <span>＋</span>
+                Yangi post
+            </button>
+
+            <button id="reportBtn">
+                <span>▣</span>
+                Hisobot yaratish
+            </button>
+
+            <button id="scheduleBtn">
+                <span>◷</span>
+                Post rejalashtirish
+            </button>
+
+            <button id="exportBtn">
+                <span>↓</span>
+                Ma’lumotlarni eksport
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+    <div class="modal-card">
+
+        <button class="close" id="closeModal">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            ✦
+        </div>
+
+        <h2 id="modalTitle">
+            Yangi post
+        </h2>
+
+        <p id="modalText">
+            Ijtimoiy tarmoqlaringiz uchun yangi kontent yarating.
+        </p>
+
+        <textarea
+            id="postText"
+            placeholder="Post matnini yozing..."
+        ></textarea>
+
+        <button class="gold-btn" id="modalAction">
+            Davom etish →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
